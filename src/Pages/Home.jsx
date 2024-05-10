@@ -13,7 +13,9 @@ function Home() {
           for Hiring or Finding your next job
           <p className="text-[16px] text-center font-extralight">
             Each month, more than 3 million job seekers turn to website in their
-            search for work, making over <CountUp duration={2} start={0} end={10000}></CountUp> applications every single day
+            search for work, making over{" "}
+            <CountUp duration={2} start={0} end={10000}></CountUp> applications
+            every single day
           </p>
         </div>
         <div className="flex md:flex-row sm:flex-col font-inter justify-start  md:gap-2 sm:gap-5 bg-white py-2 px-2 rounded-md md:w-fit 4sm:w-[70%]">

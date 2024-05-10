@@ -11,6 +11,7 @@ import TopCategory from "./Pages/TopCategory";
 import ProcessCard from "./Pages/ProcessCard";
 import FeaturedJob from "./Pages/FeaturedJob";
 import CompaniesCards from "./Pages/CompaniesCards";
+import EmailSendCom from "./Components/EmailSendCom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
     <ProcessCard/>
     <FeaturedJob/>
     <CompaniesCards/>
+    <EmailSendCom/>
       {/* <Router>
         <Routes>
           <Route path="/" element={<Navbar />} />

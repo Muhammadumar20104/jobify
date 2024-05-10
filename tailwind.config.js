@@ -21,6 +21,21 @@ export default {
       'xll': '1300px',
       '2xl': '1440px',
     },
+    keyframes:{
+      'Tup':{
+        '0% , 100%':{transform:'translateY(10px)'},
+        '50%':{transform:'translateX(0)'},
+      },
+      'Tright':{
+        '0% , 100%':{transform:'translateX(10px)'},
+        '50%':{transform:'translateX(0)'},
+      }
+    },
+    animation:{
+      'Tup':'Tup 4.5s ease-in-out infinite',
+      'Tright':'Tright 4.5s ease-in-out infinite '
+    }
+
   },
   plugins: [],
 }
