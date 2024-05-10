@@ -4,8 +4,13 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      // colors: {
+      //   darkBackground: '#1a202c',
+      //   darkText: '#cbd5e0',
+      // },
       fontFamily: { 'inter': ['Inter ', 'sans-serif'] }
     },
     screens: {
@@ -13,6 +18,7 @@ export default {
       'sm': '320px',
       '4sm': '400px',
       '5sm': '500px',
+      '6sm': '600px',
       'md': '768px',
       'xmd':'900px',
       'lg': '1024px',

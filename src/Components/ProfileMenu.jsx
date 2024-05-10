@@ -1,19 +1,26 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectLoginCheck, toggleLogin } from "../feature/LoginSlice";
 
 const ProfileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const isLogedIn = useSelector(selectLoginCheck);
+  const dispatch = useDispatch();
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleItemClick = (action) => {
-    // Implement action handling here, such as navigating to dashboard, settings, or logging out
-    console.log("Action selected:", action);
+  const handleLogoutClick = () => {
+    localStorage.removeItem('token');
+    console.log("Logout1=>",isLogedIn);
+    dispatch(toggleLogin())
+    console.log("Logout=>",isLogedIn);
+    toggleDropdown()
   };
+ 
 
   return (
-    <div className="relative inline-block text-left w-auto">
+    <div className="relative inline-block z-50 text-left w-auto">
       <div>
         <button
           type="button"
@@ -36,21 +43,21 @@ const ProfileMenu = () => {
             aria-labelledby="options-menu"
           >
             <button
-              onClick={() => handleItemClick("Dashboard")}
+              // onClick={() => handleItemClick("Dashboard")}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full text-left"
               role="menuitem"
             >
               Dashboard
             </button>
             <button
-              onClick={() => handleItemClick("Settings")}
+              // onClick={() => handleItemClick("Settings")}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full text-left"
               role="menuitem"
             >
               Settings
             </button>
             <button
-              onClick={() => handleItemClick("Logout")}
+              onClick={handleLogoutClick}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 w-full text-left"
               role="menuitem"
             >

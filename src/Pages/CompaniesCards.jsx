@@ -166,13 +166,13 @@ function CompaniesCards() {
           <div>
             <Button
               text={"View All"}
-              className="border border-sky-600 bg-transparent text-[#426fe9] font-bold w-fit px-8 rounded-[3px]    py-[8px]"
+              className="border border-sky-600 bg-transparent text-[#426fe9] font-bold w-fit px-8 rounded-[3px] hover:bg-sky-100   py-[8px]"
             />
           </div>
         </div>
         <div className="grid xlg:grid-cols-4  lg:grid-cols-3 md:grid-cols-2  gap-4  mt-10">
-          {jobs.slice(0,6).map((item) => (
-            <div className="cursor-pointer read-only:true">
+          {jobs.slice(0,6).map((item,index) => (
+            <div className="cursor-pointer read-only:true" key={index}>
               <CompanyCard />
             </div>
           ))}

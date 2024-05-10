@@ -33,7 +33,7 @@ const Dropdown = () => {
       <div>
         <button
           type="button"
-          className="inline-flex justify-start items-center gap-2 w-full rounded-md py-2 px-1 bg-white text-sm font-medium text-gray-700 "
+          className="inline-flex justify-start items-center  w-full rounded-md py-2 px-1 bg-white text-sm font-medium text-gray-700 "
           onClick={() => setIsOpen(!isOpen)}
         >
           <img
@@ -45,7 +45,7 @@ const Dropdown = () => {
           <svg
             className={`${
               isOpen ? "transform rotate-180" : ""
-            } -mr-1 ml-2 h-5 w-5`}
+            } -mr-1 ml-0 h-5 w-5`}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -60,7 +60,7 @@ const Dropdown = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
           <div
             className="py-1"
             role="menu"

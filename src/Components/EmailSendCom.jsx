@@ -8,9 +8,9 @@ import image6 from "../assets/Images/image-06.jpeg";
 import Button from "./Button";
 function EmailSendCom() {
   return (
-    <div className="container mx-auto px-14 font-inter">
-      <div className=" flex justify-between bg-blue-700 rounded-xl items-center pt-10 pb-20 px-8 gap-4">
-        <div className="w-fit flex flex-col gap-2">
+    <div className="container mx-auto slg:px-14 font-inter">
+      <div className=" flex justify-between bg-blue-700 rounded-xl items-center pt-10 pb-20 slg:px-8 gap-4">
+        <div className="w-fit hidden flex-col gap-2 slg:flex">
           <div className="flex gap-2 w-[100%]">
             <div className="w-[100%] flex justify-center items-center">
               <img src={image1} alt="" className="w-[100%] rounded-md animate-Tup" />
@@ -24,7 +24,7 @@ function EmailSendCom() {
           </div>
         </div>
         <div className="w-full flex flex-col gap-4 px-8">
-          <div className="text-4xl font-bold text-center text-white ">
+          <div className="text-4xl font-bold text-center text-white flex justify-center">
             New Things Will Always Update Regularly
           </div>
           <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ function EmailSendCom() {
             </div>
           </div>
         </div>
-        <div className="w-fit flex flex-col gap-2">
+        <div className="w-fit hidden flex-col gap-2 slg:flex">
           <div className="flex gap-2 w-[100%]">
             <div className="w-[100%] flex justify-center">
               <img

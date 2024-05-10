@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../Components/Button";
+import { CiLocationOn, CiSearch } from "react-icons/ci";
 import JobCard from "../Components/JobCard";
-import { Link } from "react-router-dom";
 
-function FeaturedJob() {
+function JobPage() {
   const jobs = [
     {
       company_name: "ABC Tech Solutions",
@@ -156,25 +156,70 @@ function FeaturedJob() {
       location_name: "Denver",
     },
   ];
-
   return (
-    <div className="bg-[#e7f0fa] ">
-      <div className="px-4 5sm:px-14 py-10 w-full container mx-auto">
-        <div className="flex justify-between flex-col gap-4 5sm:flex-row  items-center">
-          <div className="flex text-3xl gap-2">
-            Top <span className="text-sky-600">Featured Job</span>
-          </div>
-          <Link to={'private/jobs'}><div>
-            <Button
-              text={"View All"}
-              className="border border-sky-600 bg-transparent text-[#426fe9] font-bold w-fit px-8 rounded-[3px] hover:bg-white   py-[8px]"
-            />
-          </div></Link>
+    <div className="xxl:container mx-auto ">
+      <div className="bg-gray-200  px-8  py-6 text-2xl font-inter "> Find</div>
+      {/* <div className="w-full flex items-center gap-3 px-4  my-4 border">
+        <div className="w-full border h-full rounded-lg">
+          <input type="text" className="w-full px-4 py-6" placeholder="Job title ,Keyword"/>
         </div>
-        <div className="grid xlg:grid-cols-4  lg:grid-cols-3 md:grid-cols-2  gap-4  mt-10">
+        <div className="w-full border rounded-lg">
+          <input type="text" className="w-full px-4 py-6"  placeholder="Enter Location" />
+        </div>
+        <div className="flex gap-2">
           
-          {jobs.slice(0,6).map((item,index) => (
-            <JobCard item={item} key={index}/>
+          <Button
+            text={"Filter"}
+            className={"px-6 py-3 text-black bg-gray-300 text-xl font-medium w-[100%]"}
+          />
+          <Button
+            text={"Search Job"}
+            className={"px-6 py-3  text-white text-xl font-medium w-[150px]"}
+          />
+        </div>
+      </div> */}
+      <div className="flex md:flex-row sm:flex-col font-inter justify-center mt-2 border   md:gap-2 sm:gap-5 bg-white py-4 px-8  rounded-md md:w-full 4sm:w-[100%]">
+        <div className="flex justify-start items-center border rounded-lg w-full">
+          <div>
+            <CiSearch className="text-sky-500 text-4xl" />
+          </div>
+          <div className="w-full">
+            <input
+              type="text"
+              onFocus={true}
+              className="py-2 px-2 outline-none    w-full"
+              placeholder="Job Title,Keyword"
+            />
+          </div>
+        </div>
+        <div className="flex justify-start items-center border rounded-lg  w-full">
+          <div>
+            <CiLocationOn className="text-sky-500 text-4xl" />
+          </div>
+          <div className="w-full">
+            <input
+              type="text"
+              className="py-2 px-2 w-full outline-none "
+              placeholder="Job Title,Keyword"
+            />
+          </div>
+        </div>
+        <div className="w-full flex gap-2 6sm:flex-row flex-col">
+          <Button
+            text={"Filter"}
+            className="flex justify-center bg-gray-200 text-black  w-[100%] items-center  rounded-md px-4 py-4"
+          />
+          <Button
+            text={"Find Job "}
+            className="flex justify-center bg-[#0a65cc] text-white  w-[100%] items-center  rounded-md px-2 py-4"
+          />
+        </div>
+      </div>
+      <div>
+      <div className="grid xlg:grid-cols-4  lg:grid-cols-3 md:grid-cols-2  gap-4 px-6  mt-10">
+          
+          {jobs.map((item) => (
+            <JobCard item={item} />
           ))}
         </div>
       </div>
@@ -182,4 +227,4 @@ function FeaturedJob() {
   );
 }
 
-export default FeaturedJob;
+export default JobPage;
